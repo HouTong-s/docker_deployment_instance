@@ -1,0 +1,12 @@
+﻿# 使用nginx镜像作为基础镜像
+FROM nginx:latest
+# 设置工作目录为nginx静态资源目录
+WORKDIR /usr/share/nginx/html
+# 删除默认的nginx静态资源
+RUN rm -rf ./*
+# 从build文件夹中复制静态资源
+COPY build .
+# 复制本地的nginx配置文件到镜像中
+COPY nginx.conf /etc/nginx/
+# 容器运行时启动nginx服务器并关闭守护进程
+CMD ["nginx", "-g", "daemon off;"]

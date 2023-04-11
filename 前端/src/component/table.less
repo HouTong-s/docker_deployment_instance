@@ -1,0 +1,59 @@
+.root{
+  width:1060px;
+  margin: 0 auto;
+  background-color: white;
+  position: relative;
+  .content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size:14px;
+    font-weight:400;
+    color:rgba(59,66,107,1);
+    &>div:nth-of-type(even){
+      background:rgba(244,247,253,1);
+    }
+    .rowHead{
+      height:68px ;
+      line-height:68px ;
+      display: flex;
+      .empty{
+        width: 80px;
+      }
+      .headItem{
+        width: 140px;
+        text-align: center;
+      }
+    }
+    .rowItem{
+      height: 52px;
+      line-height: 52px;
+      display: flex;
+      .columnHead{
+        width: 80px;
+        text-align: center;
+      }
+      .columnItem{
+        width: 140px;
+        border-left: 1px solid #E6E8FB;
+        text-align: center;
+      }
+    }
+ 
+  }
+  .topContent{
+    position: absolute;
+    top:68px;
+    left: 80px;
+    width: 980px;
+    height: 80px;
+    font-size: 1px;
+    .item{
+      width: 140px;
+      text-align: center;
+      position: absolute;
+      background-color: white;
+      border: 1px solid #E6E8FB;
+    }
+  }
+}
